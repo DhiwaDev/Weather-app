@@ -1,0 +1,40 @@
+<div class="weather-container">
+  <h2>Weather Application</h2>
+  <div class="form-group">
+    <label for="location">Enter Location:</label>
+    <input type="text" id="location" [(ngModel)]="location" placeholder="e.g. London, UK">
+    <button (click)="getWeather()">Get Weather</button>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="weather" class="weather-details">
+    <h3>{{ weather.name }}, {{ weather.sys?.country }}</h3>
+    <p><strong>Latitude:</strong> {{ weather.coord?.lat }}</p>
+    <p><strong>Longitude:</strong> {{ weather.coord?.lon }}</p>
+    <div class="weather-info">
+      <div class="weather-icon">
+        <img [src]="getWeatherIconUrl(weather.weather[0]?.icon)" alt="Weather Icon">
+      </div>
+      <div class="temperature">
+        <p>{{ weather.main?.temp }}&deg;C</p>
+        <p class="weather-description">{{ weather.weather[0]?.description }}</p>
+        <p class="weather-description">{{ weather.weather[0]?.main }}</p>
+      </div>
+    </div>
+    <div class="additional-info">
+      <div class="weather-info-item">
+        <p><strong>Humidity</strong></p>
+        <p>{{ weather.main?.humidity }}%</p>
+      </div>
+      <div class="weather-info-item">
+        <p><strong>Wind Speed</strong></p>
+        <p>{{ weather.wind?.speed }} km/h</p>
+      </div>
+      <div class="weather-info-item">
+        <p><strong>Pressure</strong></p>
+        <p>{{ weather.main?.pressure }} hPa</p>
+      </div>
+    </div>
+  </div>
+</div>
