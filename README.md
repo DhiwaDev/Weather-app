@@ -11,9 +11,7 @@ This is a web application that provides weather information based on user input.
 
 ### Frontend
 
-1. Clone the repository:
-   
-   git clone https://github.com/your-username/your-repository.git
+1. Clone the repository
 
 2. Navigate to the frontend directory:
 
@@ -23,14 +21,13 @@ This is a web application that provides weather information based on user input.
   npm install
 
 ### Backend
-1. Clone the repository:
-
-   git clone https://github.com/your-username/your-repository.git
-
-2. Navigate to the backend directory:
+1. Clone the repository
    
+2. Navigate to the backend directory:
+
    cd backend
-Import the project into your preferred IDE.
+   
+   Import the project into your preferred IDE.
 
 ## Configuration
 ### Frontend
